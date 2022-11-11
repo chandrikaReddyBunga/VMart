@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SellerRegistrationActivity">
+
+    <include
+        android:id="@+id/sellerRegtoolbar"
+        layout="@layout/delivery_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sellerRegtoolbar"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/edit_seller_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="textPersonName"
+                        android:lines="1"
+                        android:maxLength="20"
+                        android:paddingLeft="65dp"
+                        android:paddingStart="65dp"
+                        android:theme="@style/EditTextTheme" />
+
+                    <TextView
+                        android:id="@+id/text_name_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Name:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/edit_seller_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:maxLength="25"
+                        android:paddingLeft="65dp"
+                        android:paddingStart="65dp"
+                        android:theme="@style/EditTextTheme" />
+
+                    <TextView
+                        android:id="@+id/text_email_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Email:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/edit_seller_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:paddingLeft="70dp"
+                        android:paddingStart="70dp"
+                        android:theme="@style/EditTextTheme" />
+
+                    <TextView
+                        android:id="@+id/text_phone_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Phone:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_banknamr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <Spinner
+                        android:id="@+id/spinnerBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@null"
+                        android:paddingLeft="110dp"
+                        android:paddingStart="110dp"
+                        android:spinnerMode="dropdown">
+
+                    </Spinner>
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_downarrow"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_centerVertical="true"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:id="@+id/view_spinner"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@android:color/darker_gray"
+                        android:layout_below="@+id/spinnerBank"
+                        android:layout_height="1dp"/>
+
+                    <TextView
+                        android:id="@+id/text_bankname_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="0dp"
+                        android:text="Bank Name:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_account_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/edit_account_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:paddingLeft="160dp"
+                        android:paddingStart="160dp"
+                        android:theme="@style/EditTextTheme" />
+
+                    <TextView
+                        android:id="@+id/text_accnt_number_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Account Number:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_ifsc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/edit_seller_ifsc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingLeft="95dp"
+                        android:paddingStart="95dp"
+                        android:theme="@style/EditTextTheme" />
+
+                    <TextView
+                        android:id="@+id/text_ifsc_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="IFSC Code:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_account_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/edit_seller_account_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:inputType="textPersonName"
+                        android:lines="1"
+                        android:paddingLeft="145dp"
+                        android:paddingStart="145dp"
+                        android:theme="@style/EditTextTheme" />
+
+                    <TextView
+                        android:id="@+id/text_account_name_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Account Name:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_gst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <EditText
+                        android:id="@+id/edit_gst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:paddingLeft="65dp"
+                        android:paddingStart="65dp"
+                        android:theme="@style/EditTextTheme" />
+
+                    <TextView
+                        android:id="@+id/text_gst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="GST:"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:id="@+id/btn_seller_reg"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:text="Register"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

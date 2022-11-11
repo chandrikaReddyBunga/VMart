@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MyAccountActivity">
+
+    <include
+        android:id="@+id/myAccountToolbar"
+        layout="@layout/title_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/relativeAddress"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/myAccountToolbar"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/addressImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="37dp"
+            android:src="@drawable/ic_profile" />
+
+        <TextView
+            android:id="@+id/textAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/addressImage"
+            android:text="@string/address_book"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeSignIn"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/myAccountToolbar"
+        android:layout_marginTop="30dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/signinImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="37dp"
+            android:src="@drawable/ic_signout" />
+
+        <TextView
+            android:id="@+id/signIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/signinImage"
+            android:text="@string/sign_in"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeMyOrders"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/relativeAddress"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/myordersImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="37dp"
+            android:src="@drawable/ic_orders" />
+
+        <TextView
+            android:id="@+id/textMyOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/myordersImage"
+            android:text="@string/my_orders"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:id="@+id/relativelanguage"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/relativeSignout"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/languageImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="37dp"
+            android:src="@drawable/ic_language" />
+
+        <TextView
+            android:id="@+id/textlanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/languageImage"
+            android:text="@string/ChangeLanguage"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/relativeDeliveryAreas"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/relativelanguage"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/deliveryAreaImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="37dp"
+            android:src="@drawable/ic_delivery_areas" />
+
+        <TextView
+            android:id="@+id/textDeliveryArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/deliveryAreaImage"
+            android:text="@string/DeliveryArea"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeWishlist"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/relativeDeliveryAreas"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/wishlistImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="37dp"
+            android:src="@drawable/wishlist_off" />
+
+        <TextView
+            android:id="@+id/textWishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/wishlistImage"
+            android:text="WISHLIST"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeSignout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/relativeMyOrders"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/signoutImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="37dp"
+            android:src="@drawable/ic_signout" />
+
+        <TextView
+            android:id="@+id/textSignout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/signoutImage"
+            android:text="@string/sign_out"
+            android:textColor="#000000"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

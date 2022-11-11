@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/order_list_background">
+
+    <RelativeLayout
+        android:id="@+id/relativeOrderInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/textOrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="@string/order_number_" />
+
+        <TextView
+            android:id="@+id/OrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/textOrderNumber"
+            android:text="2010001033"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/paymentProcess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/rounded_border_textview"
+            android:gravity="center_vertical"
+            android:padding="3dp"
+            android:text="Payment Failed"
+            android:textColor="@android:color/white"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/linearOrderList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/paymentProcess"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textOrderTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="@string/order_total"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/OrderTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="2031"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/paymentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                   android:textAlignment="center" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textDeliveryType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="@string/delivery_type"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/deliveryType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="1dp"
+                android:layout_height="112dp"
+                android:layout_marginTop="10dp"
+                android:background="#000000" />
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="@string/time"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:text="25-09-2018"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_8ssp" />
+
+                <TextView
+                    android:id="@+id/Time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:text="12:00PM-03:00PM"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_9ssp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/downloadInvoiceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearOrderList"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:text="@string/download_invoice"
+            android:textAlignment="center"
+            android:textSize="@dimen/_13ssp" />
+
+    </RelativeLayout>
+</RelativeLayout>

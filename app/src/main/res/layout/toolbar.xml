@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/colorGreen"
+    android:contentInsetStart="0dp"
+    android:contentInsetLeft="0dp"
+    android:contentInsetEnd="0dp"
+    android:contentInsetRight="0dp"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <RelativeLayout
+            android:id="@+id/imgrelative"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/image_sidemenu"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_sidemenu" />
+
+            <ImageView
+                android:id="@+id/image_logo"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/image_sidemenu"
+                android:background="@drawable/ic_logo"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/relative_location"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/image_logo"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/image_location"
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ic_location"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <!-- <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_toRightOf="@+id/relative_location"
+                 android:layout_marginLeft="10dp"
+                 android:layout_height="80dp">-->
+
+            <FrameLayout
+                android:id="@+id/item_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                android:layout_weight="20">
+
+                <ImageView
+                    android:id="@+id/icon_badge"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_cart"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/rounded_corner"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="@dimen/_8ssp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorGreen"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/totalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="42dp"
+                android:layout_marginRight="50dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/options_menu_layout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="0dp">
+
+
+                <ImageView
+                    android:id="@+id/optionsmenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_more"
+
+                    />
+
+            </RelativeLayout>
+
+
+            <!-- </RelativeLayout>-->
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

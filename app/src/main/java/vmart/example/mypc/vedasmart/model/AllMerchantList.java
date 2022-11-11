@@ -1,0 +1,47 @@
+package vmart.example.mypc.vedasmart.model;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
+
+public class AllMerchantList {
+
+    @SerializedName("message")
+    @Expose
+    String message;
+
+    @SerializedName("response")
+    @Expose
+    String response;
+
+    @SerializedName("merchantInfo")
+    @Expose
+    ArrayList<MerchantList> merchantLists;
+
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getResponse() {
+        return response;
+    }
+
+    public void setResponse(String response) {
+        this.response = response;
+    }
+
+    public ArrayList<MerchantList> getMerchantLists() {
+        return merchantLists;
+    }
+
+    public void setMerchantLists(ArrayList<MerchantList> merchantLists) {
+        this.merchantLists = merchantLists;
+    }
+
+}

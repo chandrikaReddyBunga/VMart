@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vmart.example.mypc.vedasmart.activities.DeliveryTypeActivity">
+
+    <include
+        android:id="@+id/deliveryTypeToolbar"
+        layout="@layout/delivery_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/relativeSummary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/deliveryTypeToolbar"
+        android:background="#f6f6f6">
+
+        <TextView
+            android:id="@+id/OrderSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/order_summary"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/spinnerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dp"
+            android:text="@string/tap_for_more_details"
+            android:textColor="#fe7878"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/spinnerText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dp"
+            android:text="@string/show_less"
+            android:textColor="#fe7878"
+            android:textSize="12dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/textMoreLessimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_down_red" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollDeliveryType"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeSummary">
+
+        <RelativeLayout
+            android:id="@+id/relativeAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/relativeCartValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f6f6f6"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/textCartValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="2.3"
+                        android:text="@string/your_cart_value" />
+
+                    <TextView
+                        android:id="@+id/cartValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        tools:text="Rs. 120.0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/textDeliveryCharges"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="2.3"
+                        android:text="@string/delivery_charges" />
+
+                    <TextView
+                        android:id="@+id/deliveryCharges"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/view" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/deliverycharges_des"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deliveryCharges"
+                    android:layout_margin="10dp"
+                    android:background="#fbf063"
+                    android:text="@string/delivery_descriptio"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/textSavings"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="2.3"
+                        android:text="@string/your_savings" />
+
+                    <TextView
+                        android:id="@+id/Savings"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textTax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:text="@string/Taxofincludedintotalamount"
+                    android:textColor="@android:color/holo_red_light" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeDeliveryMode"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/relativeCartValue">
+
+                <TextView
+                    android:id="@+id/textDeliveryMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:text="@string/tap_to_select_the_one_of_the_delivery_modes" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearSelfPickUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeDeliveryMode"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/rectangle_edittext"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textSelfPickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/self_pick_up"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/textRecomondation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/our_recommendation" />
+
+                    <TextView
+                        android:id="@+id/selfpickupDes"
+                        android:layout_width="221dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/text_selfpickup"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/TextDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone"
+                        android:text="@string/delivery_free"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/rectanglebox"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/selfPickupImage"
+                        android:layout_width="121dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1.4"
+                        android:background="@drawable/ic_pick_up" />
+
+                    <TextView
+                        android:id="@+id/select"
+                        android:layout_width="fill_parent"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="0.6"
+                        android:background="@color/colorGreen"
+                        android:gravity="center"
+                        android:text="@string/select"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/ORView"
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:layout_below="@+id/linearSelfPickUp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="36dp"
+                android:background="#f6f6f6" />
+
+            <TextView
+                android:id="@+id/textOR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearSelfPickUp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/ORView"
+                android:background="@drawable/roundcircle"
+                android:gravity="center"
+                android:text="@string/or"
+                android:textSize="16dp" />
+
+            <View
+                android:id="@+id/ORView1"
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:layout_below="@+id/linearSelfPickUp"
+                android:layout_marginTop="36dp"
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@+id/textOR"
+                android:background="#f6f6f6" />
+
+            <LinearLayout
+                android:id="@+id/linearHomeDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textOR"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/rectangle_edittext"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.4"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textHomeDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/home_delivery_"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/homedeliveryDes"
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="5dp"
+                        android:text="You can also get your orders delivered to an address of your choice for min. INR 1500.00 orders. Additional charges will be collected as per distance."
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/TextDeliveryCharges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/delivery_charges_extra" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/rectanglebox"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/homeDeliveryImage"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_weight="1.4"
+                        android:background="@drawable/ic_homedelivery" />
+
+                    <TextView
+                        android:id="@+id/select1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="21dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="0.6"
+                        android:background="@color/colorGreen"
+                        android:gravity="center"
+                        android:text="@string/select"
+
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PaymentModeActivity">
+
+    <include
+        android:id="@+id/paymentMode_toolbar"
+        layout="@layout/title_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_payOnline"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/paymentMode_toolbar"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="21dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:id="@+id/payonline"
+            android:background="@drawable/edittext_states"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/online"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_Cod"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@+id/rl_payOnline"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
+            android:id="@+id/cod"
+            android:background="@drawable/edittext_states"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:text="@string/cod"
+            android:textSize="17dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_Cod"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:text="@string/information"
+        android:textColor="#ff6139"
+        android:textSize="19dp" />
+
+    <TextView
+        android:id="@+id/text_subInfo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_info"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/completeOrderText"
+        android:textSize="16dp" />
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/text_subInfo2"
+        android:layout_below="@+id/text_subInfo1"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/completeOrdertext2"
+        android:layout_height="wrap_content" />
+-->
+
+</RelativeLayout>

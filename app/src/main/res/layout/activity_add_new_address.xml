@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_add_address"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+
+    <include
+        android:id="@+id/tool_add_new_address"
+        layout="@layout/title_toolbar" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tool_add_new_address"
+        android:background="@android:color/darker_gray" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linear_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/text_enter_fullname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/enterfullname"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/edit_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/text_enter_fullname"
+                            android:background="@drawable/edittext_states"
+                            android:inputType="textPersonName"
+                            android:maxLength="20"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@drawable/cursor_green" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/text_enter_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/address"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/edit_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/text_enter_address"
+                            android:background="@drawable/edittext_states"
+                            android:inputType="textPersonName"
+                            android:maxLength="50"
+                            android:maxLines="2"
+                            android:paddingLeft="20dp"
+                            android:textCursorDrawable="@drawable/cursor_green" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_landmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/text_landmark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/landmark"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/edit_landmark"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/text_landmark"
+                            android:background="@drawable/edittext_states"
+                            android:inputType="text"
+                            android:maxLines="2"
+                            android:paddingLeft="20dp"
+                            android:textCursorDrawable="@drawable/cursor_green" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/text_pincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pincode"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/edit_pincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/text_pincode"
+                            android:background="@drawable/edittext_states"
+                            android:digits="0123456789"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@drawable/cursor_green" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/text_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/area"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/edit_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/text_area"
+                            android:background="@drawable/edittext_states"
+                            android:inputType="text"
+                            android:maxLength="50"
+                            android:maxLines="2"
+                            android:textColor="@android:color/black"
+                            android:paddingLeft="20dp"
+                            android:textCursorDrawable="@drawable/cursor_green" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/text_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/city"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/edit_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/text_city"
+                            android:background="@drawable/edittext_states"
+                            android:inputType="text"
+                            android:textColor="@android:color/black"
+
+                            android:maxLength="25"
+                            android:paddingLeft="20dp"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@drawable/cursor_green" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/text_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/state"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/edit_state"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/text_state"
+                            android:background="@drawable/edittext_states"
+                            android:maxLength="25"
+                            android:paddingLeft="20dp"
+                            android:textColor="@android:color/black"
+                            android:singleLine="true"
+                            android:textCursorDrawable="@drawable/cursor_green" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_phoneNo"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <TextView
+                            android:id="@+id/text_enter_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/your_mobile_number"
+                            android:textColor="@android:color/black" />
+
+                        <EditText
+                            android:id="@+id/edit_mobileNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/text_enter_mobile"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edittext_states"
+                            android:digits="0123456789"
+                            android:inputType="phone"
+                            android:lines="1"
+                            android:paddingLeft="20dp"
+                            android:maxLength="13"
+                            android:textColorHint="#000000"
+                            android:textCursorDrawable="@drawable/cursor_green" />
+
+                        <TextView
+                            android:id="@+id/textmobilenumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/edittext_states"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="15dp"
+                            android:text="+91"
+                            android:textColor="@android:color/black"
+                            android:textSize="18sp"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_favourite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="15dp">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_favorite_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_favorite_address"
+                            android:textColor="@android:color/black"
+                            android:theme="@style/MyCheckBox" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+
+                        <Button
+                            android:id="@+id/btn_proceed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGreen"
+                            android:gravity="center"
+                            android:text="SAVE TO ADDRESS BOOK"
+                            android:textColor="@android:color/white"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_googlemaps"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorGreen"
+                            android:gravity="center"
+                            android:text="Select Location On Map"
+                            android:textColor="@android:color/white"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

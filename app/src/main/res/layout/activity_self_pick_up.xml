@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlselfpickup"
+    tools:context="vmart.example.mypc.vedasmart.activities.SelfPickUpActivity">
+
+    <include
+        android:id="@+id/selfPickUpToolbar"
+        layout="@layout/delivery_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/relativeSummary"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/selfPickUpToolbar"
+        android:background="#f6f6f6">
+
+        <TextView
+            android:id="@+id/OrderSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:text="@string/order_summary"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/spinnerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dp"
+            android:text="@string/tap_for_more_details"
+            android:textColor="#fe7878"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/spinnerText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="30dp"
+            android:text="@string/show_less"
+            android:textColor="#fe7878"
+            android:textSize="12dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/textMoreLessimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="27dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_down_red" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/relativeCartValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeSummary"
+        android:background="#f6f6f6"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/textCartValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="2.3"
+                android:text="@string/your_cart_value" />
+
+            <TextView
+                android:id="@+id/cartValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                tools:text="2125" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/textDeliveryCharges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="2.3"
+                android:text="@string/delivery_charges" />
+
+            <TextView
+                android:id="@+id/deliveryCharges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/view"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/textAmountPaying"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="2.3"
+                android:text="@string/amount" />
+
+            <TextView
+                android:id="@+id/amountPay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="510"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/textSavings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="2.3"
+                android:text="@string/your_savings" />
+
+            <TextView
+                android:id="@+id/Savings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                tools:text="510" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/TaxAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textSavings"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="6dp"
+            android:text="@string/Taxofincludedintotalamount"
+            android:textColor="@android:color/holo_red_light" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/r1_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeCartValue">
+
+        <TextView
+            android:id="@+id/textSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/you_selected" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeSelfPickUp"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:layout_below="@+id/r1_selected"
+        android:layout_marginTop="6dp"
+        android:background="#F5E3E3">
+
+        <TextView
+            android:id="@+id/textSelfPickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/self_pick_up"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textRecomondation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textSelfPickup"
+            android:layout_marginLeft="6dp"
+            android:text="@string/our_recommendation" />
+
+        <TextView
+            android:id="@+id/TextDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRecomondation"
+            android:layout_marginLeft="6dp"
+            android:visibility="gone"
+            android:layout_marginTop="15dp"
+            android:text="@string/delivery_free" />
+
+        <TextView
+            android:id="@+id/textSelectPickUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextDelivery"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="31dp"
+            android:text="@string/select_pick_up_location" />
+
+        <ImageView
+            android:id="@+id/selfPickupImage"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="112dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@+id/textSelfPickup"
+            android:background="@drawable/ic_pick_up" />
+
+        <TextView
+            android:id="@+id/textChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selfPickupImage"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="245dp"
+            android:text="@string/edit_change" />
+
+        <TextView
+            android:id="@+id/pickUpLocationBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textSelectPickUp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/rectanglebox"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="16dp"
+            android:scrollHorizontally="true"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/textSelectPickUpTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pickUpLocationBox"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/select_pick_up_time" />
+
+        <TextView
+            android:id="@+id/texttimeChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pickUpLocationBox"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="266dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/change_" />
+
+        <TextView
+            android:id="@+id/pickUptimeBox"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/texttimeChange"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            android:hint="Select a Time Slot"
+            android:background="@drawable/rectanglebox"
+            android:gravity="center_vertical" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_ViewOrder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGreen"
+        android:text="@string/view_order_summary"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

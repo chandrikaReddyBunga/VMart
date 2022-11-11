@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relativeTime1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/timingText1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center_vertical"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/unavailable1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:text="Un Available"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/timingText1"
+            android:background="#bdbdbd" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeTime2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeTime1">
+
+        <TextView
+            android:id="@+id/timingText2"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:textSize="12dp" />
+        <TextView
+            android:id="@+id/unavailable2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:text="Un Available"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/timingText2"
+            android:background="#bdbdbd" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeTime3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeTime2">
+
+        <TextView
+            android:id="@+id/timingText3"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:textSize="12dp" />
+        <TextView
+            android:id="@+id/unavailable3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:text="Un Available"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/timingText3"
+            android:background="#bdbdbd" />
+    </RelativeLayout>
+</RelativeLayout>

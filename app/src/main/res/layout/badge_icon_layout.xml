@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/counterValuePanel"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/item_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_weight="20">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/icon_badge"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_cart"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="top|right"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/colorGreen" />
+
+    </FrameLayout>
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/item_counter"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="0"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp" />
+</RelativeLayout>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/linear_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="25dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/all_categories"
+            android:textColor="@color/colorGreen"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/text_title"
+            android:background="@android:color/black" />
+
+        <ScrollView
+            android:id="@+id/Scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/text_title">
+
+            <RelativeLayout
+                android:id="@+id/relaticeScroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvNavigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_navigation" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/rvNavigation"
+                    android:background="@android:color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeCustomerService"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/view">
+
+                    <TextView
+                        android:id="@+id/customerService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/customer_service"
+                        android:textColor="#000000"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:id="@+id/btnCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@+id/customerService"
+                        android:background="@drawable/edittext_pressed_state"
+                        android:maxLines="1"
+                        android:text="@string/call_now"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="10dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/customerService"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/relativeCustomerService">
+
+                    <TextView
+                        android:id="@+id/contactUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/contact_us"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/contactUs"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativetrackOrder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/relative2">
+
+                    <TextView
+                        android:id="@+id/trackOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/track_my_order"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/trackOrder"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativePickUp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/relativetrackOrder">
+
+                    <TextView
+                        android:id="@+id/pickUpList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/pick_up_point_list"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/pickUpList"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <!--   <RelativeLayout
+                       android:layout_width="fill_parent"
+                       android:id="@+id/relativesellProdcuts"
+                       android:layout_below="@+id/relativePickUp"
+                       android:layout_height="50dp">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:id="@+id/sellproducts"
+                           android:layout_height="48dp"
+                           android:text="SELL PRODUCTS"
+                           android:gravity="center"
+                           android:layout_marginLeft="20dp"
+                           android:textColor="#000000"
+                           android:textSize="15sp" />
+                       <View
+                           android:layout_width="match_parent"
+                           android:layout_height="1dp"
+                           android:layout_below="@+id/sellproducts"
+                           android:background="@android:color/black"
+                           />
+                   </RelativeLayout>
+   -->
+
+                <RelativeLayout
+                    android:id="@+id/relativeFrequent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/relativePickUp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/frequentQuestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/frequent_questions"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/frequentQuestion"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeTerms"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/relativeFrequent">
+
+                    <TextView
+                        android:id="@+id/terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/terms_and_conditions"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/terms"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativePrivacy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/relativeTerms">
+
+                    <TextView
+                        android:id="@+id/privacyPolicy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@string/privacy_policy"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/privacyPolicy"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeRefund"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/relativePrivacy">
+
+                    <TextView
+                        android:id="@+id/refundReturns"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="16dp"
+                        android:maxLines="1"
+                        android:text="@string/refund_and_returns"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/refundReturns"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeAboutUs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/relativeRefund">
+
+                    <TextView
+                        android:id="@+id/aboutUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="16dp"
+                        android:maxLines="1"
+                        android:text="@string/about_us"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/aboutUs"
+                        android:background="@android:color/black" />
+                </RelativeLayout>
+
+                <!--<RelativeLayout
+                    android:id="@+id/relativeShareApp"
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/relativeAboutUs">
+
+                    <TextView
+                        android:id="@+id/shareApp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="16dp"
+                        android:maxLines="1"
+                        android:text="@string/share_app"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/shareApp"
+                        android:background="@android:color/black" />
+                </RelativeLayout>-->
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

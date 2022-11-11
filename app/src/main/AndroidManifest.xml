@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="vmart.example.mypc.vedasmart">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- commented for play store concerns-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".internetConnection.TestApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/icon_app"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_app"
+        android:supportsRtl="true"
+        android:theme="@style/NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+       <!-- android:name="android.support.multidex.MultiDexApplication"-->
+
+        <service android:name="vmart.example.mypc.vedasmart.pushnotification.MyFirebaseCloudMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+       <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon_app" />
+
+        <receiver android:name="vmart.example.mypc.vedasmart.smsreceiver.SmsReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="vmart.example.mypc.vedasmart.internetConnection.ConnectionReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="vmart.example.mypc.vedasmart.RECEIVER.InternetConnection"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBtJVRFcqmoxlznP-DBRq43iwG1lKOvWtA" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity android:name="vmart.example.mypc.vedasmart.activities.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="vmart.example.mypc.vedasmart.activities.InvoiceDisplayActivity" /> <!-- service for receiving firebase cloud messaging -->
+        <!--<activity android:name="vmart.example.mypc.vedasmart.internetConnection.TestApplication" />-->
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.MerchantListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+        android:name="vmart.example.mypc.vedasmart.activities.CategoriesActivity"
+        android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.RegisterActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.SigninActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.CartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.AddNewAddressActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.PickupLocations"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.DeliveryTypeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.HomeDeliveryActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.PickUpPointList_One"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.SelfPickUpActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.AddressActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.PickupLocationMapActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.PrivacyPolicy"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.ReturnAndRefundPolicy"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.TermsAndConditions"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.ContactUsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.MyAccountActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.DeliveryNewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.WishListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.ProductDetailsActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="35.172.183.103"
+                    android:pathPrefix="/V-Mart/product"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.DeliveryOrderSummary"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.OrderDetails"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.OrderInformation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.FrequentQuestions"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.SubcategoriesActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.PickUpPointList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.PaymentModeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.PaymentResponseActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.AboutUs"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.SellerRegistrationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.AdminProductsList"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.SellerProductOverview"
+            android:exported="true" />
+
+        <activity
+            android:name="vmart.example.mypc.vedasmart.activities.ActivityLocations"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.vmart.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

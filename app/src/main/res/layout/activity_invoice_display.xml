@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/invoiceRootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".activities.InvoiceDisplayActivity">
+
+    <WebView
+        android:id="@+id/invoiceWebview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/invoiceButtonsLinearLayout"
+        android:layout_marginTop="@dimen/_50sdp" />
+
+    <LinearLayout
+        android:id="@+id/invoiceButtonsLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/downloadInvoiceBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:background="@color/colorOrange"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/download"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_15ssp" />
+
+        <TextView
+            android:id="@+id/shareInvoiceButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorOrange"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/share"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_15ssp" />
+    </LinearLayout>
+
+</RelativeLayout>

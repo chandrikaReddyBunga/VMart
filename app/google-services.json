@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "621056572403",
+    "firebase_url": "https://vmart-app-1541756069125.firebaseio.com",
+    "project_id": "vmart-app-1541756069125",
+    "storage_bucket": "vmart-app-1541756069125.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621056572403:android:31859972ddb7e48b",
+        "android_client_info": {
+          "package_name": "vmart.example.mypc.vmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621056572403-9ooa0t6a7tn8v7oeo7s79a317es523fb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vmart.example.mypc.vmart",
+            "certificate_hash": "a8a7da80bac5efd10c78911a3fdbe9b8832e9d14"
+          }
+        },
+        {
+          "client_id": "621056572403-0nruk8u89kfu8lhmvo65a1gcmsau0vqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "vmart.example.mypc.vmart",
+            "certificate_hash": "6cd88d921c3753f240a5420f3437dbd9bd797725"
+          }
+        },
+        {
+          "client_id": "621056572403-iv9m2e5vb4h2ng6s9m3dr8t5i68g7b3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_e4QSQ6YOhNVBpz7yYfrv6j8VFNGYgwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621056572403-iv9m2e5vb4h2ng6s9m3dr8t5i68g7b3o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621056572403-p5c4u79u0qlvfc8phso1uvmof369pul1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.vedaslabs.VedasMart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

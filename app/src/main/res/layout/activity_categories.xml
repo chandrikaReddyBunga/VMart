@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_relative"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorGreen">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/cat_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/relative_back"
+                android:layout_marginLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_back_white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tool_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/toolbar_relative"
+        android:background="@android:color/darker_gray"
+
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/categories_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

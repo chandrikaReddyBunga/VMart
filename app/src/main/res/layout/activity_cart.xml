@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear_cat_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/relative_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:id="@+id/cat_img"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="20dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/relativeremove"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/cat_img"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/remove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/remove"
+                        android:textColor="@android:color/holo_red_light" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5">
+
+                <RelativeLayout
+                    android:id="@+id/rl_cat_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/cat_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Pond's Dreamflower Fragment Talc"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_cat_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_cat_title">
+
+                    <TextView
+                        android:id="@+id/cat_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="5lts" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_mrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_cat_title"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/text_mrp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/text_strike_through"
+                        android:text="MRP \u20B9 330"
+                        android:textColor="@android:color/darker_gray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_vmart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_mrp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/text_vmart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vmart \u20B9 230"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_vmart"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/text_save"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="YOUR SAVINGS \u20B9 102 Rs"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="11dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_spinner_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_save"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="149dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/spinner_border">
+
+                            <TextView
+                                android:id="@+id/btn_addTocart"
+                                android:layout_width="100dp"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:text="@string/add_to_cart_"
+                                android:textColor="@android:color/white"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/text_minus"
+                                android:layout_width="30dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:background="@android:color/darker_gray"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@android:color/black" />
+
+                            <EditText
+                                android:id="@+id/text_count_"
+                                android:layout_width="40dp"
+                                android:layout_height="25dp"
+                                android:layout_toRightOf="@+id/text_minus"
+                                android:background="@null"
+                                android:editable="false"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:padding="0dp"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_12sdp"
+                                android:theme="@style/EditTextTheme" />
+
+                            <TextView
+                                android:id="@+id/text_plus"
+                                android:layout_width="30dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@android:color/darker_gray"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@android:color/black" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

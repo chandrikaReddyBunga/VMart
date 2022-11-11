@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PickUpPointList">
+
+    <include
+        android:id="@+id/frequentquestions_toolbar"
+        layout="@layout/title_toolbar" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/frequentquestions_toolbar"
+        android:background="#bfbfbf" />
+
+    <ScrollView
+        android:id="@+id/pickupListScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view">
+
+        <RelativeLayout
+            android:id="@+id/relativeScroll"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/relativeOrderkaro"
+                android:layout_width="fill_parent"
+                android:layout_height="106dp">
+
+                <ImageView
+                    android:id="@+id/orderImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/ic_orderonline" />
+
+                <TextView
+                    android:id="@+id/textOrderKaro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@+id/orderImage"
+                    android:text="@string/place_your_order"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textOrderKaroDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textOrderKaro"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@+id/orderImage"
+                    android:text="@string/in_v_mart_n_android_or_ios_app" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relativeOrderkaro"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#bfbfbf" />
+
+            <RelativeLayout
+                android:id="@+id/relativePickUpKaro"
+                android:layout_width="fill_parent"
+                android:layout_height="106dp"
+                android:layout_below="@+id/view1"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:id="@+id/pickUpImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/ic_pickup" />
+
+                <TextView
+                    android:id="@+id/textPickUpKaro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@+id/pickUpImage"
+                    android:text="@string/pickup_your_order"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textPickUpKaroDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textPickUpKaro"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@+id/pickUpImage"
+                    android:text="@string/collect_your_order_at_selected_n_self_pickup_point" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relativePickUpKaro"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#bfbfbf" />
+
+            <RelativeLayout
+                android:id="@+id/relativeSaveKaro"
+                android:layout_width="fill_parent"
+                android:layout_height="106dp"
+                android:layout_below="@+id/view2"
+                android:layout_marginTop="6dp">
+
+                <ImageView
+                    android:id="@+id/saveImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/ic_save" />
+
+                <TextView
+                    android:id="@+id/textSaveKaro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toRightOf="@+id/saveImage"
+                    android:text="@string/save_your_money"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textSaveKaroDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textSaveKaro"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@+id/saveImage"
+                    android:text="@string/save_your_money_and_n_valuable_time" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relativeSaveKaro"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="#bfbfbf" />
+
+            <RelativeLayout
+                android:id="@+id/relativeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeSaveKaro"
+                android:layout_marginTop="70dp">
+
+                <Button
+                    android:id="@+id/pickUpBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/colorGreen"
+                    android:text="@string/suggest_a_nearest_pick_up_point"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textEnterArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeBtn"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:layout_marginRight="12dp"
+                android:text="@string/texrArea" />
+
+            <RelativeLayout
+                android:id="@+id/relativeSearchArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/textEnterArea"
+                android:layout_marginTop="6dp">
+
+                <EditText
+                    android:id="@+id/editSearchArea"
+                    android:layout_width="279dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/background_box"
+                    android:hint="@string/i_e_450001_or_bangalore"
+                    android:paddingLeft="6dp" />
+
+                <Button
+                    android:id="@+id/searchBtn"
+                    android:layout_width="60dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_toRightOf="@+id/editSearchArea"
+                    android:background="@drawable/background_box"
+                    android:text="@string/search" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
